@@ -7,6 +7,9 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import PatientDashboard from "./components/PatientDashboard";
 import DoctorDashboard from "./components/DoctorDashboard";
 import BookAppointment from "./components/BookAppointment";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Policy from "./pages/Policy";
 
 const App = () => {
   return (
@@ -15,6 +18,9 @@ const App = () => {
         <Route path="/user-register" element={<Registraion />} />
         <Route path="/user-login" element={<Login />} />
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/policy" element={<Policy />} />
 
         <Route
           path="/patient-dashboard"

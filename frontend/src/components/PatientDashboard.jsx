@@ -29,10 +29,6 @@ const PatientDashboard = () => {
     }
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    navigate("/user-login");
-  };
 
   return (
     <Layout>
@@ -40,9 +36,7 @@ const PatientDashboard = () => {
       <div className="container py-4">
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h2>Welcome, {user?.full_name}</h2>
-          <button className="btn btn-danger btn-sm" onClick={handleLogout}>
-            Logout
-          </button>
+          
         </div>
 
         <div className="card shadow-sm p-4">

@@ -50,7 +50,7 @@ const DoctorDashboard = () => {
     if (doctorId) fetchAppointments();
   }, [doctorId]);
 
-  // ✅ Update appointment status (approve/reject/complete)
+  //  Update appointment status (approve/reject/complete)
   const handleStatusChange = async (appointmentId, status) => {
     try {
       await api.put(`/appointments/update-status/${appointmentId}/`, { status });
@@ -61,11 +61,7 @@ const DoctorDashboard = () => {
     }
   };
 
-  // ✅ Logout
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    navigate("/user-login");
-  };
+  
 
   if (loading) return <p className="text-center mt-5">Loading...</p>;
   if (!doctor) return <p className="text-center mt-5">Doctor not found</p>;
@@ -78,9 +74,6 @@ const DoctorDashboard = () => {
       {/* Header */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="fw-bold text-primary">Welcome, Dr. {doctor.full_name}</h2>
-        <button className="btn btn-danger btn-sm" onClick={handleLogout}>
-          Logout
-        </button>
       </div>
 
       {/* Profile Card */}
