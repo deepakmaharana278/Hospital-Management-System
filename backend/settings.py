@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -59,10 +60,15 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite default port
-    "https://hospital-management-system-rs07.onrender.com/api/"
+    "https://hospital-management-system-1-fbpb.onrender.com/"
 ]
-CORS_ALLOW_ALL_ORIGINS = True
 
+FRONTEND_URLS = os.environ.get("https://hospital-management-system-1-fbpb.onrender.com/")
+if FRONTEND_URLS:
+    # split on spaces, remove any trailing slash for safety
+    for origin in FRONTEND_URLS.split():
+        origin = origin.rstrip("/")  # remove trailing slash if present
+        CORS_ALLOWED_ORIGINS.append(origin)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny'],
