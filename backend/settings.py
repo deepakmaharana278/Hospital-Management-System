@@ -59,7 +59,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite default port
-    "https://hospital-management-system-rs07.onrender.com"
+    "https://hospital-management-system-rs07.onrender.com/api/"
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
