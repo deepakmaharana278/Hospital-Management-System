@@ -60,7 +60,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite default port
-    "https://hospital-management-system-1-fbpb.onrender.com/"
+    # "https://hospital-management-system-1-fbpb.onrender.com/"
 ]
 
 FRONTEND_URLS = os.environ.get("https://hospital-management-system-1-fbpb.onrender.com/")
@@ -99,15 +99,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hospital_db',      # your MySQL database name
-        'USER': 'root',             # your MySQL username
-        'PASSWORD': 'deepak278', # replace with your MySQL password
-        'HOST': 'localhost',        # or '127.0.0.1'
-        'PORT': '3306',             # default MySQL port
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',      # your MySQL database name
+        'USER': 'postgres.zusghelmskhxwawpsnpb',             # your MySQL username
+        'PASSWORD': 'vixama7698@m3player.com', # replace with your MySQL password
+        'HOST': 'aws-1-ap-south-1.pooler.supabase.com',        # or '127.0.0.1'
+        'PORT': '6543',             # default MySQL port
     }
 }
 
