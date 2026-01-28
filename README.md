@@ -2,6 +2,11 @@
 
 This is a Django-based Hospital Management System backend that provides user management, appointment scheduling, and doctor profile functionalities.
 
+## 🔗 Live Demo
+
+Check out the site live here:  
+[Deepak-MediConnect](https://hospital-management-system-1-fbpb.onrender.com/) 
+
 ## 🚀 Features
 
 - User Roles: Patient and Doctor with role-based access control
